@@ -1,0 +1,77 @@
+automerge: false
+parallel_apply: true
+parallel_plan: true
+projects:
+- autoplan:
+    enabled: true
+    when_modified:
+    - '*.hcl'
+    # - '*.tf*'
+    # - ../environment.hcl
+    # - ../../region.hcl
+    # - ../../../../root.hcl
+    # - ../vpc/terragrunt.hcl
+    # - ../../../../../modules/aws/vpc/*.tf*
+    # - ../../../../../modules/aws/ec2/*.tf*
+  dir: terragrunt/live/
+  # execution_order_group: 2
+# - autoplan:
+#     enabled: true
+#     when_modified:
+#     - '*.hcl'
+#     - '*.tf*'
+#     - ../environment.hcl
+#     - ../../region.hcl
+#     - ../../../../root.hcl
+#     - ../../../../../modules/aws/vpc/*.tf*
+#   dir: terragrunt/live/aws/ap-southeast-1/dev/vpc
+#   execution_order_group: 1
+# - autoplan:
+#     enabled: true
+#     when_modified:
+#     - '*.hcl'
+#     - '*.tf*'
+#     - ../environment.hcl
+#     - ../../region.hcl
+#     - ../../../../root.hcl
+#     - ../vpc/terragrunt.hcl
+#     - ../../../../../modules/aws/vpc/*.tf*
+#     - ../../../../../modules/aws/ec2/*.tf*
+#   dir: terragrunt/live/aws/ap-southeast-1/prod/ec2
+#   execution_order_group: 2
+# - autoplan:
+#     enabled: true
+#     when_modified:
+#     - '*.hcl'
+#     - '*.tf*'
+#     - ../environment.hcl
+#     - ../../region.hcl
+#     - ../../../../root.hcl
+#     - ../../../../../modules/aws/vpc/*.tf*
+#   dir: terragrunt/live/aws/ap-southeast-1/prod/vpc
+#   execution_order_group: 1
+# - autoplan:
+#     enabled: true
+#     when_modified:
+#     - '*.hcl'
+#     - '*.tf*'
+#     - ../environment.hcl
+#     - ../../region.hcl
+#     - ../../../../root.hcl
+#     - ../vpc/terragrunt.hcl
+#     - ../../../../../modules/aws/vpc/*.tf*
+#     - ../../../../../modules/aws/ec2/*.tf*
+#   dir: terragrunt/live/aws/ap-southeast-1/stage/ec2
+#   execution_order_group: 2
+# - autoplan:
+#     enabled: true
+#     when_modified:
+#     - '*.hcl'
+#     - '*.tf*'
+#     - ../environment.hcl
+#     - ../../region.hcl
+#     - ../../../../root.hcl
+#     - ../../../../../modules/aws/vpc/*.tf*
+#   dir: terragrunt/live/aws/ap-southeast-1/stage/vpc
+#   execution_order_group: 1
+version: 3
