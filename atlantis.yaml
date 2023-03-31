@@ -3,7 +3,7 @@ parallel_apply: true
 parallel_plan: true
 projects:
 - autoplan:
-    enabled: false
+    enabled: true
     when_modified:
     - '*.hcl'
     - '*.tf*'
@@ -15,7 +15,7 @@ projects:
     - ../../../../../modules/aws/ec2/*.tf*
   dir: terragrunt/live/aws/ap-southeast-1/dev/ec2
 - autoplan:
-    enabled: false
+    enabled: true
     when_modified:
     - '*.hcl'
     - '*.tf*'
