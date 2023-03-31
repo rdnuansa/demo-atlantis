@@ -10,10 +10,8 @@ projects:
     - ../environment.hcl
     - ../../region.hcl
     - ../../../../root.hcl
-    - ../vpc/terragrunt.hcl
     - ../../../../../modules/aws/vpc/*.tf*
-    - ../../../../../modules/aws/ec2/*.tf*
-  dir: terragrunt/live/aws/ap-southeast-1/dev/ec2
+  dir: terragrunt/live/aws/ap-southeast-1/dev/vpc
 - autoplan:
     enabled: true
     when_modified:
@@ -22,6 +20,8 @@ projects:
     - ../environment.hcl
     - ../../region.hcl
     - ../../../../root.hcl
+    - ../vpc/terragrunt.hcl
     - ../../../../../modules/aws/vpc/*.tf*
-  dir: terragrunt/live/aws/ap-southeast-1/dev/vpc
+    - ../../../../../modules/aws/ec2/*.tf*
+  dir: terragrunt/live/aws/ap-southeast-1/dev/ec2
 version: 3
