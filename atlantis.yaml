@@ -2,18 +2,18 @@ automerge: false
 parallel_apply: true
 parallel_plan: true
 projects:
-# - autoplan:
-#     enabled: false
-#     when_modified:
-#     - '*.hcl'
-#     - '*.tf*'
-#     - ../environment.hcl
-#     - ../../region.hcl
-#     - ../../../../root.hcl
-#     - ../vpc/terragrunt.hcl
-#     - ../../../../../modules/aws/vpc/*.tf*
-#     - ../../../../../modules/aws/ec2/*.tf*
-#   dir: terragrunt/live/aws/ap-southeast-1/dev/ec2
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../region.hcl
+    - ../../../../root.hcl
+    - ../vpc/terragrunt.hcl
+    - ../../../../../modules/aws/vpc/*.tf*
+    - ../../../../../modules/aws/ec2/*.tf*
+  dir: terragrunt/live/aws/ap-southeast-1/dev/ec2
 - autoplan:
     enabled: false
     when_modified:
